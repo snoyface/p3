@@ -19,6 +19,10 @@ Route::get('/lorem', function () {
 	return view('lorem');
 });
 
+//responds to GET from /lorem/num
+Route::get('/lorem/{paragraphs?}', 'loremController@generator');
+
+
 Route::get('/users', function () {
 	return view('users');
 });
