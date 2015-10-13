@@ -12,9 +12,5 @@ abstract class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }
 
-Route::get('/practice', function() {
 
-    echo 'Hello World!';
-
-});
 
