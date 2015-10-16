@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
-class LoremController extends Controller {
+ public function getCreate(){
+        $num = $_GET['paragraphs'];
+        };
+
+class loremController extends Controller {
 
 
     public function generator() {
-
-        public function getCreate(){
-        $num = $_GET['paragraphs'];
-        };
 
         $generator = new \Badcow\LoremIpsum\Generator($num);
         $paragraphs = $generator->getParagraphs();
@@ -20,4 +20,8 @@ class LoremController extends Controller {
         return implode('<p>', $paragraphs);
 
     }
+
+    public function userGen() {
+
+    };
 }
