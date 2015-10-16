@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
- public function getCreate(){
-        $num = $_GET['paragraphs'];
-        };
+
 
 class loremController extends Controller {
 
+    public function getCreate(){
+        $num = $_GET['paragraphs'];
+        };
 
     public function generator() {
 
@@ -17,11 +18,15 @@ class loremController extends Controller {
         $paragraphs = $generator->getParagraphs();
         
         //return view('lorem')->with('paragraphs', $paragraphs);
-        return implode('<p>', $paragraphs);
+        implode('<p>', $paragraphs);
 
-    }
+        return view('result')->with('paragraphs',$paragraphs);
+
+    };
+
+
 
     public function userGen() {
 
     };
-}
+};
