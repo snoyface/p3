@@ -6,14 +6,18 @@ use App\Http\Controllers\Controller;
 
 class LoremController extends Controller {
 
-    public function __construct() {
-        # Put anything here that should happen before any of the other actions
-    }
 
-    public function generator($num) {
-        $generator = new Badcow\LoremIpsum\Generator();
-        $paragraphs = $generator->getParagraphs($num);
+    public function generator() {
+
+        public function getCreate(){
+        $num = $_GET['paragraphs'];
+        };
+
+        $generator = new \Badcow\LoremIpsum\Generator($num);
+        $paragraphs = $generator->getParagraphs();
         
-        return view('lorem')->with('paragraphs', $paragraphs);
+        //return view('lorem')->with('paragraphs', $paragraphs);
+        return implode('<p>', $paragraphs);
+
     }
 }

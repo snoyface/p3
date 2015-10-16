@@ -33,6 +33,11 @@
             .title {
                 font-size: 96px;
             }
+
+            .button {
+                font-size: 60px;
+                border-bottom-color: red;
+            }
         </style>
     </head>
     <body>
@@ -40,10 +45,10 @@
             <div class="content">
                 <div class="title">Developers Best Friend</div>
                 <p>Do you want to generate random content?</p><br>
-                <a href="/lorem">Yes</a>
+                <a class='button' href="/lorem">Yes</a>
 
                 <p>Do you want to generate random users?</p><br>
-                <a href="/users">Yes</a>
+                <a class='button' href="/users">Yes</a>
 
 
             </div>

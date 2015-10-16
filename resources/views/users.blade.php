@@ -11,8 +11,8 @@
     </head>
     <body>
     	<div class='question'>
-    		<form action="action.php" method="post">
-			 <p>How many users? (99 max) <input type="text" name="users" /></p>
+    		<form action="result" method="get">
+			 <p>How many users? (99 max) <input type="int" name="users" /></p>
  			 <p><input type="submit" /></p>
 			</form>
     	</div>	
