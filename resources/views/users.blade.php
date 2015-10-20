@@ -12,9 +12,14 @@
     <body>
     	<div class='question'>
     		<form action="result" method="get">
-			 <p>How many users? (99 max) <input type="int" name="users" /></p>
+			 <input type='hidden' name='_token' value='{{ csrf_token() }}'>
+             <p>How many users? (99 max) <input type="int" name="users" /></p>
  			 <p><input type="submit" /></p>
 			</form>
+            @if( isset($request))
+                You Submitted:
+                <br>
+                {{ $request['paragraphs']}}
     	</div>	
     </body>
 

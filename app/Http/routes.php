@@ -26,7 +26,9 @@ Route::get('/users', function () {
 	return view('users');
 });
 
- Route::get('/result',function() {
-	return view('result', 'loremController')
-});
+// Route::get('/result',function() {
+//	return view('result');
+//});
 
+Route::controller('lorem','loremController');
+Route::post('/lorem', 'loremController@generator');
