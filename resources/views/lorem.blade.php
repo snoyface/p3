@@ -12,10 +12,19 @@
  			 <p><input type="submit" /></p>
             </form>
 
-            @if( isset($request))
+            @if( isset($paragraphs))
               Your submission:
               <br>
-              {{ implode('<p>', $paragraphs)}}
+              <ul>
+              @foreach($paragraphs as $paragraph)
+                <li>
+                  {{ $paragraph }} 
+                  <br>
+                </li>
+              @endforeach  
+              <!-- {{{ implode('<p>', $paragraphs)}}}
+ -->
+              </ul>
     	</div>	
         @endif
 
