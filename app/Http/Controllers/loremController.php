@@ -11,11 +11,7 @@ require_once '/path/to/Faker/src/autoload.php';
 
 class loremController extends Controller {
 
-/*
-    public function getCreate(){
-        $num = $_GET['paragraphs'];
-        }
-*/
+//generator will create the paragraphs for Lorem and send to /Lorem to be displayed
     public function generator(Request $request) {
         $num = $request -> input('paragraphs');
 
@@ -29,7 +25,8 @@ class loremController extends Controller {
     }
 
 
-
+/*
+//userGen creates the random users to be displayed in /Users
     public function userGen(Request $request) {
         $num = $request -> input('users');
 
@@ -37,11 +34,13 @@ class loremController extends Controller {
 
         $fakeData = array();
 
-        for(i = 0, i < $num, i++){
+        for(i == 0, i < $num, i++){
             array_push($fakeData, $faker->name);
         }
 
         return View('users') ->with('fakeData', $fakeData);
 
     }
+
+*/
 };
