@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-
+require_once '/path/to/Faker/src/autoload.php';
 
 
 
@@ -23,14 +23,25 @@ class loremController extends Controller {
         $paragraphs = $generator->getParagraphs($num);
         
         //return view('lorem')->with('paragraphs', $paragraphs);
-        
+
         return View('lorem')->with('paragraphs',$paragraphs);
 
     }
 
 
 
-    public function userGen() {
+    public function userGen(Request $request) {
+        $num = $request -> input('users');
+
+        $faker = Faker\Factory::create();
+
+        $fakeData = array();
+
+        for(i = 0, i < $num, i++){
+            array_push($fakeData, $faker->name);
+        }
+
+        return View('users') ->with('fakeData', $fakeData);
 
     }
 };
