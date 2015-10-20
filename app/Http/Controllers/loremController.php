@@ -23,9 +23,8 @@ class loremController extends Controller {
         $paragraphs = $generator->getParagraphs($num);
         
         //return view('lorem')->with('paragraphs', $paragraphs);
-        implode('<p>', $paragraphs);
-
-        return view('lorem')->with('paragraphs',$paragraphs);
+        
+        return View('lorem')->with('paragraphs',$paragraphs);
 
     }
 
