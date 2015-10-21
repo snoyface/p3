@@ -17,7 +17,7 @@
               Your submission:
               <br>
               <ul>
-              @foreach($$fakeData as $fake)
+              @foreach($fakeData as $fake)
                 <li>
                   {{ $fake }} 
                   

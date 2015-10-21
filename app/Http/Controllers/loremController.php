@@ -30,7 +30,7 @@ class loremController extends Controller {
     public function userGen(Request $request) {
         $num = $request -> input('users');
 
-        $faker = Faker\Factory::create();
+        $faker = \Faker\Factory::create();
 
         $fakeData = array();
 
