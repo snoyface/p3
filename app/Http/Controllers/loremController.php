@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+//require_once '/path/to/Faker/src/autoload.php';
 
 
 
@@ -25,7 +26,6 @@ class loremController extends Controller {
     }
 
 
-/*
 //userGen creates the random users to be displayed in /Users
     public function userGen(Request $request) {
         $num = $request -> input('users');
@@ -34,7 +34,7 @@ class loremController extends Controller {
 
         $fakeData = array();
 
-        for(i == 0, i < $num, i++){
+        for($i = 0; $i < $num; $i++){
             array_push($fakeData, $faker->name);
         }
 
@@ -42,5 +42,5 @@ class loremController extends Controller {
 
     }
 
-*/
+
 };

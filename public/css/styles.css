@@ -11,6 +11,11 @@
                 font-family: 'Lato';
             }
 
+            ul
+            {
+                  list-style-type: none;
+            }
+
             .container {
                 text-align: center;
                 display: table-cell;
@@ -30,3 +35,9 @@
                 font-size: 60px;
                 border-bottom-color: red;
             }
+
+            .question{
+                font-size: 60px;
+                text-align: center;
+            }
+            

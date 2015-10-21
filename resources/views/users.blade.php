@@ -5,14 +5,27 @@
 @stop
 @section('content')
     	<div class='question'>
-    		<form action="result" method="get">
+    		<form action="users" method="POST">
 			 <input type='hidden' name='_token' value='{{ csrf_token() }}'>
-             <p>How many users? (99 max) <input type="int" name="users"
+             <p>How many users? (99 max)<br> <input type="int" name="users"
              value="{{isset($request['users']) ? $request['users']: 'how many?'}}" /></p>
  			 <p><input type="submit" /></p>
 			</form>
             
     	</div>	
+        @if( isset($fakeData))
+              Your submission:
+              <br>
+              <ul>
+              @foreach($$fakeData as $fake)
+                <li>
+                  {{ $fake }} 
+                  
+                </li>
+              @endforeach  
+              </ul>
+        </div>  
+        @endif
 
 
 @stop

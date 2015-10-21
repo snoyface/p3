@@ -26,9 +26,10 @@ Route::get('/users', function () {
 	return view('users');
 });
 
-// Route::get('/result',function() {
-//	return view('result');
-//});
-
+//lorem controller and routing
 Route::controller('lorem','loremController');
 Route::post('/lorem', 'loremController@generator');
+
+//faker controller and routing
+Route::controller('users', 'loremController');
+Route::post('/users', 'loremController@userGen');
