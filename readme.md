@@ -8,7 +8,7 @@ www.p3.cscie15.me
 Random paragraph creator and user generator. Works in laraval. Also known as "developers best friend" 
 
 ## Demo
-located here: 
+located here: http://screencast.com/t/bl2fHkEMI
 
 ## Details for teaching team
 No login required, just load the page and make your password!
