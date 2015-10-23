@@ -13,11 +13,13 @@
                 value="{{isset($request['paragraphs']) ? $request['paragraphs']: 'how many?'}}" /></p>
  			 <p><input type="submit" /></p>
             </form>
+      </div> 
 
+      <div class='answer'>
             @if( isset($paragraphs))
-              Your submission:
+             <h2 id='header'> Your submission:</h2>
               <br>
-              <ul>
+              <ul id='usersub'>
               @foreach($paragraphs as $paragraph)
                 <li>
                   {{ $paragraph }} 
@@ -25,7 +27,12 @@
                 </li>
               @endforeach  
               </ul>
-    	</div>	
+              <a href={{ URL::previous() }}>Reload</a>
+              <br>
+              <a href='/'>Back to Start</a>
+      </div>
+
+    	
         @endif
 
 @stop

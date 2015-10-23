@@ -13,8 +13,9 @@
 			</form>
             
     	</div>	
+        <div class='answer'> 
         @if( isset($fakeData))
-              Your submission:
+             <h2 id='header'> Your submission:</h2>
               <br>
               <ul>
               @foreach($fakeData as $fake)
@@ -24,7 +25,11 @@
                 </li>
               @endforeach  
               </ul>
+        <a href={{ URL::previous() }}>Reload</a>
+        <br>
+        <a href='/'>Back to Start</a>
         </div>  
+
         @endif
 
 

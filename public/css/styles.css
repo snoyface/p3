@@ -15,6 +15,9 @@
             {
                   list-style-type: none;
             }
+            #header{
+                text-align: center;
+            }
 
             .container {
                 text-align: center;
@@ -39,5 +42,10 @@
             .question{
                 font-size: 60px;
                 text-align: center;
+            }
+            .answer{
+                font-size: 15px;
+                text-align: center;
+
             }
             
